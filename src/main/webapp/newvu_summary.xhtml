@@ -1,0 +1,25 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:pe="http://primefaces.org/ui/extensions">
+
+	<h:panelGroup styleClass="wizard-panel" style="overflow:auto;background: #B9D3EE;">
+
+		<!-- Unternehmen -->
+		<h:panelGrid columns="2" cellspacing="5" columnClasses="wizard-summary-column-left,column-right">
+			<h:outputLabel value="Unternehmen" styleClass="wizard-summary-header"/><h:outputText styleClass="wizard-summary-header"/>
+			<h:outputLabel value="Name Firma:"/><h:outputText value="#{testView.nameFirma}"/>
+			<br/>
+	   	</h:panelGrid>   
+	
+	</h:panelGroup>
+
+    <p:commandButton value="Submit" action="#{testView.save}" update="growl" process="@this"/>
+
+</ui:composition>
+
